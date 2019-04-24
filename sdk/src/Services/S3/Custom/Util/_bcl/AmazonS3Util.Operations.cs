@@ -69,7 +69,7 @@ namespace Amazon.S3.Util
                 BucketName = bucketName, 
                 Expires = config.CorrectedUtcNow.ToLocalTime().AddDays(1), 
                 Verb = HttpVerb.HEAD, 
-                Protocol = Protocol.HTTP
+                Protocol = Protocol.HTTPS
             };
 
             var url = s3Client.GetPreSignedURL(request);
